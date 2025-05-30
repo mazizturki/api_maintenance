@@ -385,3 +385,98 @@
       visibility: visible;
       opacity: 1;
     }
+
+    /* Conteneur de connexion centré */
+#login-container {
+  max-width: 360px;
+  margin: 100px auto;
+  background: rgba(12, 18, 39, 0.85); /* Fond plus sombre, opaque */
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  box-sizing: border-box;
+  color: #e1e6eb;
+}
+
+#login-container h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #a1caff; /* Bleu doux clair */
+}
+
+/* Formulaire */
+#login-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: left;
+  color: #9bb3cc;
+}
+
+#login-form input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1.5px solid #2e3c5a;
+  border-radius: 8px;
+  background: #1b273e;
+  color: #e1e6eb;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#login-form input[type="password"]:focus {
+  border-color: #4caf50;
+  background: #24354d;
+  outline: none;
+  color: #ffffff;
+}
+
+#login-form button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#login-form button:hover {
+  background-color: #3b8c3a;
+}
+
+/* Message d'erreur */
+#error-msg {
+  margin-top: 15px;
+  color: #ff6b6b;
+  font-weight: 700;
+  min-height: 18px;
+}
+
+/* Cache le main-content au départ */
+#main-content {
+  display: none;
+}
+
+#logout-btn {
+  background-color: #cc4b4b;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+  box-shadow: 0 2px 6px rgba(204, 75, 75, 0.7);
+}
+
+#logout-btn:hover {
+  background-color: #a63939;
+}

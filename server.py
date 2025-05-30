@@ -40,7 +40,6 @@ def get_maintenance():
     return jsonify(maintenance)
 
 @app.route('/api/maintenance', methods=['POST'])
-@check_maintenance
 def update_maintenance():
     check_api_key()
     data = request.get_json()
