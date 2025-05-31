@@ -1,5 +1,4 @@
-    /*const API_URL = 'https://vierund-maintenance.onrender.com/api/maintenance';*/
-    const API_URL = 'http://localhost:5000/api/maintenance';
+    const API_URL = 'https://vierund-maintenance.onrender.com/api/maintenance';
 
     const API_KEY = 'v44i31er5u015nd190105a'; 
 
@@ -88,7 +87,7 @@
             isActive, 
             message,
             updatedAt: new Date().toISOString(),
-            updatedBy: 'admin' // À remplacer par l'utilisateur réel
+            updatedBy: 'admin' 
           })
         });
         
