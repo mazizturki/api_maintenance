@@ -389,8 +389,8 @@
     /* Conteneur de connexion centré */
 #login-container {
   max-width: 360px;
-  margin: 100px auto;
-  background: rgba(12, 18, 39, 0.85); /* Fond plus sombre, opaque */
+  margin: 30px auto;
+  background: rgba(12, 18, 39, 0.85); 
   padding: 30px 25px;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
@@ -402,7 +402,7 @@
 #login-container h2 {
   margin-bottom: 20px;
   font-weight: 700;
-  color: #a1caff; /* Bleu doux clair */
+  color: #a1caff;
 }
 
 /* Formulaire */
@@ -451,12 +451,13 @@
   background-color: #3b8c3a;
 }
 
-/* Message d'erreur */
 #error-msg {
   margin-top: 15px;
   color: #ff6b6b;
   font-weight: 700;
   min-height: 18px;
+  border: none;
+  background-color:rgba(1, 1, 56, 0);
 }
 
 /* Cache le main-content au départ */

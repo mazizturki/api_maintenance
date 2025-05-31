@@ -3,26 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>V Radio - Gestion du Bandeau de Maintenance</title>
+  <title>Vierund - Gestion de Maintenance</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="faviconbg.png" type="image/svg+xml">
 </head>
 <body>
   <div id="login-container">
+    <img src="vierundbg.png" alt="" style="width: 45%;">
     <h2>Connexion</h2>
     <form id="login-form">
-      <label for="password">Mot de passe :</label><br />
-      <input type="password" id="password" required autocomplete="off" /><br /><br />
-      <button type="submit">Se connecter</button>
+      <label for="password" style="margin-bottom: 4%;">Mot de passe</label>
+      <input type="password" id="password" required autocomplete="off" placeholder="**********" /><br />
+      <button type="submit" style="margin-top: 10%;">Se connecter</button>
       <span class="error" id="error-msg"></span>
+      <div class="footer">
+      <p>Vierund &copy; <span id="year"></span> | Tous droits réservés</p>
+      <p class="version">Version 1.0.2</p>
+    </div>
     </form>
   </div>
 
   <div class="container" id="main-content">
     <div class="header">
       <div class="logo">
-        <i class="fas fa-broadcast-tower logo-icon"></i>
-        <span>V Radio Dashboard</span>
+        <img src="vierundbg.png" alt="" style="width: 12%;">
+        <span>Vierund Dashboard</span>
       </div>
       <div class="user-menu">
         <div class="user-avatar">V</div>
@@ -31,7 +37,7 @@
     </div>
 
     <div class="form-section">
-      <h1><i class="fas fa-tools"></i> Gestion du Bandeau</h1>
+      <h1><i class="fas fa-tools"></i> Gestion du Bandeau - V Radio</h1>
 
       <form id="maintenance-form">
         <div class="switch-container">
@@ -79,7 +85,7 @@
 
     <div class="footer">
       <p>Vierund &copy; <span id="year"></span> | Tous droits réservés</p>
-      <p class="version">Version 1.0.0</p>
+      <p class="version">Version 1.0.2</p>
     </div>
   </div>
   <script src="script.js"></script>
