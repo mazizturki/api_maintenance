@@ -1,4 +1,6 @@
-const API_URL = 'http://localhost:5000/api/maintenance'; 
+    /*const API_URL = 'https://vierund-maintenance.onrender.com/api/maintenance';*/
+    const API_URL = 'http://localhost:5000/api/maintenance';
+
     const API_KEY = 'v44i31er5u015nd190105a'; 
 
     // Set current year in footer
@@ -28,6 +30,7 @@ const API_URL = 'http://localhost:5000/api/maintenance';
       showLoading(true);
       
       fetch(API_URL, {
+        method: 'GET',
         headers: {
           'X-API-Key': API_KEY
         }
