@@ -3,8 +3,18 @@ from flask_cors import CORS
 from functools import wraps
 
 app = Flask(__name__, static_folder='public', static_url_path='')
-CORS(app, resources={r"/api/*": {"origins": ["https://vierund-maintenance.onrender.com", "http://localhost:5001"]}})
-
+# Autorise spécifiquement votre domaine et les requêtes OPTIONS
+CORS(app, resources={
+    r"/api/*": {
+        "origins": [
+            "https://vierund.onrender.com",
+            "https://vierund-maintenance.onrender.com",
+            "http://localhost:*"
+        ],
+        "methods": ["GET", "POST", "OPTIONS"],
+        "allow_headers": ["X-API-Key", "Content-Type"]
+    }
+})
 # Configuration
 API_KEY = "v44i31er5u015nd190105a"
 BYPASS_TOKEN = "tt44315015"
@@ -49,6 +59,21 @@ def update_maintenance():
     if 'message' in data and isinstance(data['message'], str):
         maintenance['message'] = data['message']
     return jsonify(maintenance)
+
+def _build_cors_preflight_response():
+    response = jsonify({'status': 'preflight'})
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    response.headers.add("Access-Control-Allow-Headers", "*")
+    response.headers.add("Access-Control-Allow-Methods", "*")
+    return response
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'https://vierund.onrender.com')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type, X-API-Key')
+    response.headers.add('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+    response.headers.add('Access-Control-Allow-Credentials', 'true')
+    return response
 
 # Route principale (protégée par le middleware)
 @app.route('/')
