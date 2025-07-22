@@ -69,10 +69,10 @@ def _build_cors_preflight_response():
 
 @app.after_request
 def after_request(response):
-    response.headers.add('Access-Control-Allow-Origin', 'https://vierund.onrender.com')
-    response.headers.add('Access-Control-Allow-Headers', 'Content-Type, X-API-Key')
-    response.headers.add('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
-    response.headers.add('Access-Control-Allow-Credentials', 'true')
+    response.headers['Access-Control-Allow-Origin'] = 'https://vierund.onrender.com'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'X-API-Key, X-Bypass-Token, Content-Type'
+    response.headers['Access-Control-Allow-Credentials'] = 'true'
     return response
 
 # Route principale (protégée par le middleware)
