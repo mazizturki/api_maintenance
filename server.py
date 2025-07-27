@@ -9,6 +9,7 @@ CORS(app, resources={
         "origins": [
             "https://vierund.onrender.com",
             "https://vierund-maintenance.onrender.com",
+            "https://reclamibot.onrender.com",
             "http://localhost:*"
         ],
         "methods": ["GET", "POST", "OPTIONS"],
